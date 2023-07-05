@@ -68,3 +68,4 @@ body {
     100% {transform: rotate(360deg);}
 }
 
+/*The timer is not centered in every case, fix it*/
