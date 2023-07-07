@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+:root {
+    --left-bg-color: rgba(43, 119, 226, 0.493);
+    --right-bg-color: rgba(137, 43, 226, 0.493);
+    --left-btn-color: rgba(43, 119, 226, 1);
+    --right-btn-color: rgba(137, 43, 226, 1);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    height: 500px;
+    width: 100%;
+}
+
+.right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: url('https://images.unsplash.com/photo-1596332996407-d8d5d3b60e8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80') center/cover;
+    width: 50%;    
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: url('https://images.unsplash.com/photo-1571754344243-93415f05e5ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80') center/cover;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.right::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--right-bg-color);
+}
+
+.left::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--left-bg-color);
+}
+
+.btn {
+    position: relative;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.right:hover {
+    width: 75%;
+    transition: width 0.1s linear;
+}
+
+.left:hover {
+    width: 75%;
+    transition: width 0.1s linear;
+}
+
+.container h2 {
+    margin: 40px;
+    color: white;
+    font-size: 50px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    transform: scale(0.98);
+    transition: transform 0.1s linear;
+}
+
+.left .btn:hover {
+    background-color: var(--left-btn-color);
+    border-color: var(--left-btn-color);
+}
+
+.right .btn:hover {
+    background-color: var(--right-btn-color);
+    border-color: var(--right-btn-color);
+}
+
+
+
+
+
+
