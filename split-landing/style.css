@@ -5,95 +5,104 @@
     --right-bg-color: rgba(137, 43, 226, 0.493);
     --left-btn-color: rgba(43, 119, 226, 1);
     --right-btn-color: rgba(137, 43, 226, 1);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1s;
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
 }
 
 .container {
-    display: flex;
+    position: relative;
     height: 500px;
     width: 100%;
 }
 
-.right {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background: url('https://images.unsplash.com/photo-1596332996407-d8d5d3b60e8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80') center/cover;
+.split {
+    position: absolute;
     width: 50%;    
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+    height: 100%;
 }
 
-.left {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background: url('https://images.unsplash.com/photo-1571754344243-93415f05e5ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80') center/cover;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
+.split.right {
+    background: url('https://images.unsplash.com/photo-1596332996407-d8d5d3b60e8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+    background-size: cover;
+    background-position: center;
+    right: 0;
 }
 
-.right::before {
+.split.left {
+    background: url('https://images.unsplash.com/photo-1571754344243-93415f05e5ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80');
+    background-size: cover;
+    background-position: center;
+    left: 0;
+}
+
+
+.split.right::before {
     content: '';
     width: 100%;
     height: 100%;
-    position: absolute;
     background-color: var(--right-bg-color);
+    position: absolute;
 }
 
-.left::before {
+.split.left::before {
     content: '';
     width: 100%;
     height: 100%;
-    position: absolute;
     background-color: var(--left-bg-color);
+    position: absolute;
 }
 
 .btn {
-    position: relative;
-    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 2.5rem;
     background-color: transparent;
     border: 2px solid white;
     color: white;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 1rem;
     text-transform: uppercase;
 }
 
-.right:hover {
-    width: 75%;
-    transition: width 0.1s linear;
+.hover-left .left, .hover-right .right{
+    width: var(--hover-width);
 }
 
-.left:hover {
-    width: 75%;
-    transition: width 0.1s linear;
+.hover-left .right, .hover-right .left{
+    width: var(--other-width);
+}
+
+.split.right, .split.left, .split.right::before, .split.left::before{
+    transition: all var(--speed) ease;
 }
 
 .container h2 {
-    margin: 40px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
     color: white;
-    font-size: 50px;
-    position: relative;
+    font-size: 3rem;
+    position: absolute;
     white-space: nowrap;
-}
-
-.btn:hover {
-    transform: scale(0.98);
-    transition: transform 0.1s linear;
 }
 
 .left .btn:hover {
@@ -104,6 +113,18 @@ body {
 .right .btn:hover {
     background-color: var(--right-btn-color);
     border-color: var(--right-btn-color);
+}
+
+@media (max-width: 800px) {
+    .container h2 {
+        font-size: 2rem;
+        top: 30%;
+    }
+
+    .btn {
+        width: 12rem;
+        padding: 1.2rem;
+    }
 }
 
 
