@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Muli&display=swap');
+
+* {
+    font-family: 'Muli', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: steelblue;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+    height: 400px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    padding: 10px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.form-control label {
+    position: absolute;
+    left: 0;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container p {
+    margin-top: 20px;
+}
+
+.container p a {
+    color: cadetblue;
+    text-decoration: none;
+}
+
+.form-control input:focus, form button:focus, .container p a:focus {
+    outline: 3px dotted black;
+}
+
+form button:active {
+    transform: scale(0.98);
+}
+
+label span {
+    display: inline-block;
+}
+
+.form-control input:focus + label span, .form-control input:valid + label span{
+    color: cadetblue;
+    transform: translateY(-20px);
+}
