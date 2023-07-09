@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Muli&display=swap');
+
+* {
+    font-family: 'Muli', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    background-color: blueviolet;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.container figure {
+    background-color: rgba(0, 0, 0, 0.448);
+    margin: 10px;
+    border-radius: 5px;
+    padding: 15px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
