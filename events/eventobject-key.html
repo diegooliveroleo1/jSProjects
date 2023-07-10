@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pressed key</title>
+</head>
+
+<body>
+    <input type="text">
+    <div></div>
+    <script>
+        const textBox = document.querySelector('input')
+        const key = document.querySelector('div')
+
+        textBox.addEventListener('keydown', (e) => {
+            key.textContent = `You pressed ${e.key}`
+        })
+    </script>
+</body>
+
+</html>

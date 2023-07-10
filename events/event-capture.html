@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Capture</title>
+</head>
+
+<body>
+    <div>
+        <button>Click me</button>
+    </div>
+    <pre></pre>
+    <script>
+        //With event capture the event bubbling is reversed
+        
+        const btn = document.querySelector('button')
+        const para = document.querySelector('pre')
+        const div = document.querySelector('div')
+        const body = document.querySelector('body')
+
+        div.addEventListener('click', (e) => {
+            para.textContent += `You clicked on a ${e.currentTarget.tagName}\n`
+        }, { capture: true })
+
+        body.addEventListener('click', (e) => {
+            para.textContent += `You clicked on a ${e.currentTarget.tagName}\n`
+        }, { capture: true })
+
+        btn.addEventListener('click', (e) => {
+            para.textContent += `You clicked on a ${e.currentTarget.tagName}\n`
+        })
+    </script>
+</body>
+
+</html>
