@@ -1,19 +1,15 @@
-const body = document.querySelector('body')
-const boxContainers = document.querySelectorAll('.box-container')
-const boxes = document.querySelectorAll('.box')
-const inst = document.querySelector('.inst')
-const key = document.getElementById('key')
-const kCode = document.getElementById('kCode')
-const code = document.getElementById('code')
+const container = document.querySelector('.container')
 
-body.addEventListener('keydown', (e) => {
-    inst.style.display = 'none'
-
-    boxContainers.forEach(box => {
-        box.style.display = 'flex'
-    })
-    
-    key.innerText = e.key
-    kCode.innerText = e.keyCode
-    code.innerText = e.code
+window.addEventListener('keydown', (ev) => {
+    container.innerHTML = `
+    <div class="box">${ev.key === ' ' ? 'Space' : ev.key}
+    <small>key</small>
+    </div>
+    <div class="box">${ev.keyCode}
+    <small>keyCode</small>
+    </div>
+    <div class="box">${ev.code}
+    <small>code</small>
+    </div>
+    `
 })
