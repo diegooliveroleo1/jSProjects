@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+/*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*Box model stuff*/
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #eafbff;
+    background-image: linear-gradient(        to bottom,        #eafbff 0%,        #eafbff 50%,        #5290f0 50%,        #5290f0 100%    );
+/*Typography stuff*/
+    font-family: 'Muli', sans-serif;
+}
+
+nav {
+/*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*Box model stuff*/
+    width: 80px;
+    padding: 20px;
+    border-radius: 3px;
+    background-color: #fff;
+/*Manipulations stuff*/
+    transition: width 0.6s linear;
+/*Miscellaneous*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav.active {
+    width: 350px;
+}
+
+nav ul {
+/*Display stuff*/
+    display: flex;
+/*Box model stuff*/
+    width: 0;
+    margin: 0;
+    padding: 0;
+/*Manipulations stuff*/
+    transition: width 0.6s linear;
+/*Miscellaneous*/
+    list-style: none;
+}
+
+nav.active ul {
+    width: 100%;
+}
+
+nav ul li {
+/*Box model stuff*/
+    margin: 0 3px;
+/*Manipulations stuff*/
+    transition: transform 0.6s linear,     opacity 0.6s linear;
+    opacity: 0;
+}
+
+nav.active ul li{
+/*Manipulations stuff*/
+    transform: rotateY(360deg);
+    opacity: 1;
+}
+
+nav ul a {
+/*Positioning stuff*/
+    position: relative;
+/*Box model stuff*/
+    margin: 0 10px;
+/*Typography stuff*/
+    text-decoration: none;
+    color: #000;
+}
+
+.icon {
+/*Positioning stuff*/
+    position: relative;
+/*Box model stuff*/
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    background-color: #fff;
+/*Miscellaneous*/
+    cursor: pointer;
+}
+
+.icon .line {
+/*Positioning stuff*/
+    position: absolute;
+    left: 5px;
+    top: 10px;
+/*Box model stuff*/
+    width: 20px;
+    height: 2px;
+    background-color: #5290f0;
+/*Manipulations stuff*/
+    transition: transform 0.6s linear;
+}
+
+.icon .line2 {
+/*Positioning stuff*/
+    top: auto;
+    bottom: 10px;
+}
+
+.active .icon .line1 {
+/*Manipulations stuff*/
+    transform: rotate(-765deg) translateY(5.5px);
+}
+
+.active .icon .line2 {
+/*Manipulations stuff*/
+    transform: rotate(765deg) translateY(-5.5px);
+}
+
+
+
+
+
