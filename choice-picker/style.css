@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+/*Box model stuff*/
+    margin: 0;
+    padding: 0;
+/*Miscellaneous*/
+    box-sizing: border-box;
+}
+
+body {
+/*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*Box model stuff*/
+    height: 100vh;
+    background-color: #2b88f0;
+/*Typography stuff*/
+    font-family: 'Muli', sans-serif;
+}
+
+.container {
+/*Display stuff*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+/*Box model stuff*/
+    width: 500px;
+}
+
+.container p {
+/*Typography stuff*/
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+textarea {
+/*Display stuff*/
+    display: block;
+/*Box model stuff*/
+    width: 100%;
+    height: 100px;
+    margin: 10px 0 20px;
+    padding: 10px;
+    border: none;
+/*Typography stuff*/
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.tag-container {
+/*Display stuff*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+/*Display stuff*/
+    display: inline-block;
+/*Box model stuff*/
+    max-width: 100%;
+    margin: 0 5px 10px 0;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #f0932b;
+/*Typography stuff*/
+    font-size: 14px;
+    color: #fff;
+/*Miscellaneous*/
+    overflow: hidden;
+}
+
+.selected {
+/*Box model stuff*/
+    background-color: #273c75;
+}
+
+
+
