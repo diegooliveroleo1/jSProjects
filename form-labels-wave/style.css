@@ -1,87 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Muli&display=swap');
 
 * {
-    font-family: 'Muli', sans-serif;
-    box-sizing: border-box;
+/*Box model stuff*/
     margin: 0;
     padding: 0;
+/*Typography stuff*/
+    font-family: 'Muli', sans-serif;
+/*Miscellaneous*/
+    box-sizing: border-box;
 }
 
 body {
+/*Display stuff*/
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+/*Box model stuff*/
     height: 100vh;
     background-color: steelblue;
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 5px;
-    padding: 20px;
-    color: white;
+/*Box model stuff*/
     height: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+/*Typography stuff*/
+    color: white;
 }
 
 .container h1 {
-    text-align: center;
+/*Box model stuff*/
     margin-bottom: 30px;
+/*Typography stuff*/
+    text-align: center;
 }
 
 .form-control {
+/*Positioning stuff*/
     position: relative;
-    margin: 20px 0 40px;
+/*Box model stuff*/
     width: 300px;
+    margin: 20px 0 40px;
 }
 
 .form-control input {
+/*Box model stuff*/
     width: 100%;
-    background-color: transparent;
+    padding: 10px;
     border: none;
     border-bottom: 2px solid white;
+    background-color: transparent;
+/*Typography stuff*/
     color: white;
-    padding: 10px;
 }
 
 form button {
+/*Box model stuff*/
     width: 100%;
+    margin-bottom: 20px;
     padding: 10px;
     border: none;
     border-radius: 5px;
+/*Typography stuff*/
     font-family: inherit;
+/*Miscellaneous*/
     cursor: pointer;
-    margin-bottom: 20px;
 }
 
 .form-control label {
+/*Positioning stuff*/
     position: absolute;
     left: 0;
+/*Manipulations stuff*/
     transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .container p {
+/*Box model stuff*/
     margin-top: 20px;
 }
 
 .container p a {
-    color: cadetblue;
+/*Typography stuff*/
     text-decoration: none;
+    color: cadetblue;
 }
 
 .form-control input:focus, form button:focus, .container p a:focus {
+/*Box model stuff*/
     outline: 3px dotted black;
 }
 
 form button:active {
+/*Manipulations stuff*/
     transform: scale(0.98);
 }
 
 label span {
+/*Display stuff*/
     display: inline-block;
 }
 
 .form-control input:focus + label span, .form-control input:valid + label span{
+/*Typography stuff*/
     color: cadetblue;
+/*Manipulations stuff*/
     transform: translateY(-20px);
 }

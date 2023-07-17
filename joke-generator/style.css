@@ -1,52 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+/*Box model stuff*/
     margin: 0;
     padding: 0;
+/*Typography stuff*/
+    font-family: 'Roboto', sans-serif;
+/*Miscellaneous*/
+    box-sizing: border-box;
 }
 
 body {
-    align-items: center;
+/*Display stuff*/
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    align-items: center;
     justify-content: center;
+/*Box model stuff*/
+    height: 100vh;
     padding: 20px;
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    box-shadow: -2px 5px 5px 0px #A398BA, 
-    inset -5px 7px 5px 0px #CFC9DB;
-    padding: 50px 20px;
-    text-align: center;
-    max-width: 100%;
+/*Box model stuff*/
     width: 800px;
+    max-width: 100%;
+    padding: 50px 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+/*Typography stuff*/
+    text-align: center;
+/*Miscellaneous*/
+    box-shadow: -2px 5px 5px 0px #A398BA,     inset -5px 7px 5px 0px #CFC9DB;
 }
 
 h3 {
-    letter-spacing: 2px;
+/*Manipulations stuff*/
     opacity: 0.5;
+/*Miscellaneous*/
+    letter-spacing: 2px;
 }
 
 #joke {
+/*Box model stuff*/
+    max-width: 600px;
+    margin: 50px auto;
+/*Typography stuff*/
     font-size: 30px;
+/*Miscellaneous*/
     letter-spacing: 1px;
     line-height: 40px;
-    margin: 50px auto;
-    max-width: 600px;
 }
 
 .btn {
+/*Display stuff*/
     display: block;
+/*Box model stuff*/
     margin: 10px auto;
     padding: 14px 40px;
-    box-shadow: -2px 5px 5px 0px #A398BA, 
-    inset -5px 7px 5px 0px #CFC9DB;
+/*Typography stuff*/
     font-size: 16px;
+/*Miscellaneous*/
+    box-shadow: -2px 5px 5px 0px #A398BA,     inset -5px 7px 5px 0px #CFC9DB;
     cursor: pointer;
 }
 

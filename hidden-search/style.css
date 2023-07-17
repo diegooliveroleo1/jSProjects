@@ -1,48 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+/*Box model stuff*/
     margin: 0;
     padding: 0;
+/*Typography stuff*/
+    font-family: 'Roboto', sans-serif;
+/*Miscellaneous*/
+    box-sizing: border-box;
 }
 
 body {
-    align-items: center;
+/*Display stuff*/
     display: flex;
-    height: 100vh;
+    align-items: center;
     justify-content: center;
+/*Box model stuff*/
+    height: 100vh;
     background-image: linear-gradient(90deg, #7d5fff, #7158e2);
 }
 
 .container {
-    background-color: white;
+/*Display stuff*/
     display: flex;
     align-items: center;
-    border-radius: 20px;
-    padding: 5px 10px;
-    transition: width 0.3s linear;
+/*Box model stuff*/
     width: 35px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: white;
+/*Manipulations stuff*/
+    transition: width 0.3s linear;
 }
 
 .search {
+/*Box model stuff*/
     width: 100%;
     border: none;
+/*Typography stuff*/
     font-size: 18px;
 }
 
 .active {
+/*Box model stuff*/
     width: 200px;
 }
 
 .search:focus {
+/*Box model stuff*/
     outline: none;
 }
 
 .btn {
+/*Display stuff*/
     justify-self: flex-end;
-    cursor: pointer;
-    background: none;
-    border: none;
+/*Box model stuff*/
     padding: 1px;
+    border: none;
+    background: none;
+/*Miscellaneous*/
+    cursor: pointer;
 }

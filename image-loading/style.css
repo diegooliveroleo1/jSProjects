@@ -1,66 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+/*Box model stuff*/
     margin: 0;
     padding: 0;
+/*Typography stuff*/
+    font-family: 'Roboto', sans-serif;
+/*Miscellaneous*/
+    box-sizing: border-box;
 }
 
 body {
-    align-items: center;
+/*Display stuff*/
     display: flex;
+    align-items: center;
+/*Box model stuff*/
     height: 100vh;
     background-color: black;
 }
 
 .main-img {
-    object-fit: cover;
+/*Positioning stuff*/
     position: relative;
+/*Miscellaneous*/
+    object-fit: cover;
 }
 
 .main-img img {
+/*Box model stuff*/
     max-width: 100%;
     height: auto;
+/*Manipulations stuff*/
     filter: blur(0px);
     transition: filter 2s linear;
 }
 
 .main-img img.loading {
+/*Manipulations stuff*/
     filter: blur(20px);
 }
 
 .circle {
-    height: 30px;
-    width: 30px;
-    background-color: transparent;
+/*Positioning stuff*/
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
+    top: 50%;
+/*Box model stuff*/
+    width: 30px;
+    height: 30px;
     border: 2px solid #999;
     border-top: 2px solid #777;
+    border-radius: 50%;
+    background-color: transparent;
+/*Manipulations stuff*/
+    transform: translateX(-50%);
     animation: spin 2s linear infinite;
 }
 
 .content {
+/*Display stuff*/
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+/*Positioning stuff*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+/*Box model stuff*/
+    width: 30px;
+    height: 30px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-color: transparent;
+/*Typography stuff*/
     font-size: 10px;
     color: #666;
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    background-color: transparent;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    border: 2px solid transparent;
 }
 
 .remove {
+/*Display stuff*/
     display: none;
 }
 

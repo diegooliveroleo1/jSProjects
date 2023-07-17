@@ -1,47 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
 * {
-    font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
+/*Box model stuff*/
     margin: 0;
     padding: 0;
+/*Typography stuff*/
+    font-family: 'Montserrat', sans-serif;
+/*Miscellaneous*/
+    box-sizing: border-box;
 }
 
 body {
-    align-items: center;
+/*Display stuff*/
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    align-items: center;
     justify-content: center;
+/*Box model stuff*/
+    height: 100vh;
     background-color: darkgray;
+/*Typography stuff*/
     text-align: center;
 }
 
 .box {
-    padding: 15px 50px;
-    background-color: white;
-    margin: 10px;
-    box-shadow: 2px 3px 5px 0px #000000;
-    min-width: 150px;
+/*Display stuff*/
     display: inline-flex;
     align-items: center;
     justify-content: center;
+/*Positioning stuff*/
     position: relative;
+/*Box model stuff*/
+    min-width: 150px;
+    margin: 10px;
+    padding: 15px 50px;
+    background-color: white;
+/*Typography stuff*/
     font-weight: bold;
+/*Miscellaneous*/
+    box-shadow: 2px 3px 5px 0px #000000;
 }
 
 .box small {
+/*Positioning stuff*/
     position: absolute;
-    top: -24px;
     left: 0;
+    top: -24px;
+/*Box model stuff*/
     width: 100%;
+/*Typography stuff*/
     font-size: 15px;
     color: rgb(52, 46, 46);
 }
 
 .inst {
-    background-color: white;
+/*Box model stuff*/
     padding: 15px 50px;
+    background-color: white;
+/*Miscellaneous*/
     box-shadow: 2px 3px 5px 0px #000000;
 }
 

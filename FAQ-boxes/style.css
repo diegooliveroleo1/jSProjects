@@ -1,106 +1,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
 * {
+/*Miscellaneous*/
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+/*Box model stuff*/
     background-color: #f0f0f0;
+/*Typography stuff*/
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
+/*Box model stuff*/
     margin: 50px 0 30px;
+/*Typography stuff*/
     text-align: center;
 }
 
 .faq-container {
+/*Box model stuff*/
     max-width: 600px;
     margin: 0 auto;
 }
 
 .faq {
-    background-color: transparent;
-    border: 1px solid #9fa4ab;
-    margin: 20px 0;
-    border-radius: 10px;
-    padding: 20px 40px 20px 20px;
+/*Positioning stuff*/
     position: relative;
-    overflow: hidden;
+/*Box model stuff*/
+    margin: 20px 0;
+    padding: 20px 40px 20px 20px;
+    border: 1px solid #9fa4ab;
+    border-radius: 10px;
+    background-color: transparent;
+/*Manipulations stuff*/
     transition: 0.2s ease;
+/*Miscellaneous*/
+    overflow: hidden;
     cursor: pointer;
 }
 
 .faq.active::before, .faq.active::after  {
+/*Display stuff*/
     content: '\f075';
+/*Positioning stuff*/
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 0;
+/*Typography stuff*/
     font-family: 'Font Awesome 5 Free';
     font-size: 6rem;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    opacity: 0.2;
-    z-index: 0;
     color: blue;
+/*Manipulations stuff*/
+    opacity: 0.2;
 }
 
 .faq.active::before {
-    top: -10px;
+/*Positioning stuff*/
     left: -20px;
-    transform: rotateY(180deg);
+    top: -10px;
+/*Typography stuff*/
     color: green;
+/*Manipulations stuff*/
+    transform: rotateY(180deg);
 }
 
 .faq-title {
+/*Box model stuff*/
     margin: 0;
 }
 
 .faq-text {
-    margin: 30px 0 0;
+/*Display stuff*/
     display: none;
+/*Box model stuff*/
+    margin: 30px 0 0;
 }
 
 .faq.active .faq-text {
+/*Display stuff*/
    display: block; 
 }
 
 .faq-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    overflow: hidden;
-    height: 30px;
-    width: 30px;
-    background-color: transparent;
-    border-color: transparent;
+/*Display stuff*/
     display: flex;
-    font-size: 16px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+/*Positioning stuff*/
+    position: absolute;
+    right: 20px;
+    top: 20px;
+/*Box model stuff*/
+    width: 30px;
+    height: 30px;
+    border-color: transparent;
     border-radius: 50%;
+    background-color: transparent;
+/*Typography stuff*/
+    font-size: 16px;
+/*Miscellaneous*/
+    overflow: hidden;
     cursor: pointer;
 }
 
 .active {
-    background-color: #fff;
-    box-shadow: -3px -1px 5px 0px rgba(0, 0, 0, 0.13), 
-    2px 3px 5px 0px rgba(0, 0, 0, 0.10);
+/*Box model stuff*/
     padding-top: 30px;
+    background-color: #fff;
+/*Miscellaneous*/
+    box-shadow: -3px -1px 5px 0px rgba(0, 0, 0, 0.13),     2px 3px 5px 0px rgba(0, 0, 0, 0.10);
 }
 
 .active .faq-toggle{
+/*Box model stuff*/
     background-color: #9fa4ab;
+/*Typography stuff*/
     color: #fff;
 }
 
 .faq-toggle .fa-times {
+/*Display stuff*/
     display: none;
 }
 
 .active .fas.fa-chevron-down {
+/*Display stuff*/
     display: none;
 }
 
 .active .fas.fa-times {
+/*Display stuff*/
     display: block;
 }
 

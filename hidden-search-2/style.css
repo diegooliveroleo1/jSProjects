@@ -1,52 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+/*Box model stuff*/
     margin: 0;
     padding: 0;
+/*Typography stuff*/
+    font-family: 'Roboto', sans-serif;
+/*Miscellaneous*/
+    box-sizing: border-box;
 }
 
 body {
-    align-items: center;
+/*Display stuff*/
     display: flex;
-    height: 100vh;
+    align-items: center;
     justify-content: center;
+/*Box model stuff*/
+    height: 100vh;
     background-image: linear-gradient(90deg, #7d5fff, #7158e2);
 }
 
 .container {
-   background-color: #fff;
+/*Positioning stuff*/
    position: relative;
+/*Box model stuff*/
+   background-color: #fff;
 }
 
 .search {
-    font-size: 18px;
+/*Box model stuff*/
+    width: 50px;
+    height: 50px;
+    padding: 15px;
     border: none;
     outline: none;
-    height: 50px;
-    width: 50px;
-    padding: 15px;
+/*Typography stuff*/
+    font-size: 18px;
+/*Manipulations stuff*/
     transition: width 0.3s ease;
 }
 
 .btn {
+/*Positioning stuff*/
     position: absolute;
-    font-size: 24px;
     left: 0;
     top: 0;
-    height: 50px;
+/*Box model stuff*/
     width: 50px;
-    background: #fff;
+    height: 50px;
     border: 0;
-    cursor: pointer;
+    background: #fff;
+/*Typography stuff*/
+    font-size: 24px;
+/*Manipulations stuff*/
     transition: transform 0.3s ease;
+/*Miscellaneous*/
+    cursor: pointer;
 }
 
 .container.active .btn {
+/*Manipulations stuff*/
     transform: translateX(200px);
 }
 
 .container.active .search{
+/*Box model stuff*/
     width: 200px;
 }
