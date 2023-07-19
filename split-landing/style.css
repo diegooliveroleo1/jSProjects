@@ -11,76 +11,100 @@
 }
 
 * {
-    box-sizing: border-box;
+/*Box model stuff*/
     margin: 0;
     padding: 0;
+/*Miscellaneous*/
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+/*Box model stuff*/
     height: 100vh;
+/*Typography stuff*/
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
+/*Positioning stuff*/
     position: relative;
-    height: 500px;
+/*Box model stuff*/
     width: 100%;
+    height: 500px;
 }
 
 .split {
+/*Positioning stuff*/
     position: absolute;
+/*Box model stuff*/
     width: 50%;    
-    overflow: hidden;
     height: 100%;
+/*Miscellaneous*/
+    overflow: hidden;
 }
 
 .split.right {
-    background: url('https://images.unsplash.com/photo-1596332996407-d8d5d3b60e8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
-    background-size: cover;
-    background-position: center;
+/*Positioning stuff*/
     right: 0;
+/*Box model stuff*/
+    background-position: center;
+    background-size: cover;
+    background: url('https://images.unsplash.com/photo-1596332996407-d8d5d3b60e8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
 }
 
 .split.left {
-    background: url('https://images.unsplash.com/photo-1571754344243-93415f05e5ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80');
-    background-size: cover;
-    background-position: center;
+/*Positioning stuff*/
     left: 0;
+/*Box model stuff*/
+    background-position: center;
+    background-size: cover;
+    background: url('https://images.unsplash.com/photo-1571754344243-93415f05e5ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80');
 }
 
 
 .split.right::before {
+/*Display stuff*/
     content: '';
+/*Positioning stuff*/
+    position: absolute;
+/*Box model stuff*/
     width: 100%;
     height: 100%;
     background-color: var(--right-bg-color);
-    position: absolute;
 }
 
 .split.left::before {
+/*Display stuff*/
     content: '';
+/*Positioning stuff*/
+    position: absolute;
+/*Box model stuff*/
     width: 100%;
     height: 100%;
     background-color: var(--left-bg-color);
-    position: absolute;
 }
 
 .btn {
+/*Display stuff*/
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+/*Positioning stuff*/
     position: absolute;
-    top: 40%;
     left: 50%;
-    transform: translateX(-50%);
+    top: 40%;
+/*Box model stuff*/
     width: 15rem;
     height: 2.5rem;
-    background-color: transparent;
     border: 2px solid white;
-    color: white;
-    font-weight: bold;
+    background-color: transparent;
+/*Typography stuff*/
     font-size: 1rem;
+    font-weight: bold;
     text-transform: uppercase;
+    color: white;
+/*Manipulations stuff*/
+    transform: translateX(-50%);
 }
 
 .hover-left .left, .hover-right .right{
@@ -96,23 +120,29 @@ body {
 }
 
 .container h2 {
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 3rem;
+/*Positioning stuff*/
     position: absolute;
+    left: 50%;
+    top: 20%;
+/*Typography stuff*/
+    font-size: 3rem;
+    color: white;
+/*Manipulations stuff*/
+    transform: translateX(-50%);
+/*Miscellaneous*/
     white-space: nowrap;
 }
 
 .left .btn:hover {
-    background-color: var(--left-btn-color);
+/*Box model stuff*/
     border-color: var(--left-btn-color);
+    background-color: var(--left-btn-color);
 }
 
 .right .btn:hover {
-    background-color: var(--right-btn-color);
+/*Box model stuff*/
     border-color: var(--right-btn-color);
+    background-color: var(--right-btn-color);
 }
 
 @media (max-width: 800px) {

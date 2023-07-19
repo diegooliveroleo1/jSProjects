@@ -1,40 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+/*Box model stuff*/
     margin: 0;
     padding: 0;
+/*Typography stuff*/
+    font-family: 'Roboto', sans-serif;
+/*Miscellaneous*/
+    box-sizing: border-box;
 }
 
 body {
-    align-items: center;
+/*Display stuff*/
     display: flex;
     flex-direction: column;
+    align-items: center;
+/*Miscellaneous*/
     overflow-x: hidden;
 }
 
 .container {
+/*Display stuff*/
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
 }
 
 .box {
-    background-color: aqua;
-    height: 100px;
+/*Box model stuff*/
     width: 200px;
+    height: 100px;
     margin-top: 20px;
+    background-color: aqua;
+/*Manipulations stuff*/
     transform: translateX(400%);
     transition: transform 0.4s ease;
 }
 
 .box:nth-child(even) {
+/*Manipulations stuff*/
     transform: translateX(-400%);
     transition: transform 0.4s ease;
 }
 
 .box.positioned {
+/*Manipulations stuff*/
     transform: translateX(0);
 }
